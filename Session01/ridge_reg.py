@@ -153,7 +153,7 @@ def normalize_and_add_ones(X):
     return np.column_stack((ones, X_normalized))       
 
 if __name__ == '__main__':
-    X, Y = get_data(path = "./death_rate_data.txt")  
+    X, Y = get_data(path = "./datasets/death_rate_data.txt")  
     # Normalization
     X = normalize_and_add_ones(X)
     #Train_test_split
