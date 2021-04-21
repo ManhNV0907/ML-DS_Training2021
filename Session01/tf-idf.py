@@ -22,7 +22,7 @@ def gather_20newsgroup_data():
     list_newsgroups.sort()
 
     #Collect English stopwords
-    with open ('datasets/20news-bydate/stop_words.txt') as f:
+    with open ('./datasets/20news-bydate/stop_words.txt') as f:
         stop_words = f.read().splitlines()
 
     stemmer = PorterStemmer() #Producing proper words
@@ -133,5 +133,5 @@ def get_tf_idf(data_path):
 
 if __name__ == '__main__':
     gather_20newsgroup_data()
-    generate_vocabulary("./datasets/20news-bydate/20news-test-processed.txt")
-    get_tf_idf("./datasets/20news-bydate/20news-test-processed.txt")
+    generate_vocabulary("./datasets/20news-bydate/20news-full-processed.txt")
+    get_tf_idf("./datasets/20news-bydate/20news-full-processed.txt")
