@@ -3,6 +3,8 @@
 import numpy as np
 from os import listdir
 from os.path import join, isfile
+import nltk
+# nltk.download('stopwords')
 from nltk.corpus import stopwords
 from collections import defaultdict
 from nltk.tokenize import word_tokenize
@@ -22,8 +24,7 @@ def gather_20newsgroup_data():
     list_newsgroups.sort()
 
     #Collect English stopwords
-    with open ('./datasets/20news-bydate/stop_words.txt') as f:
-        stop_words = f.read().splitlines()
+    stop_words = set(stopwords.words('english'))
 
     stemmer = PorterStemmer() #Producing proper words
 
