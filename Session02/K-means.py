@@ -7,8 +7,6 @@ class Member():
         self._r_d = r_d
         self._label = label
         self._doc_id = doc_id
-    # def get_r_d(self):
-    #     return self._r_d
 
 class Cluster():
     def __init__(self):
