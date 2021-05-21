@@ -161,4 +161,4 @@ def train_and_evaluate_RNN(batch_size, lstm_size):
                 print('Epoch:', train_data_reader._num_epoch)
                 print('Accuracy on test data:', num_true_preds * 100 / len(test_data_reader._data))
 if __name__ == '__main__':
-    train_and_evaluate_RNN(batch_size=32, lstm_size=32)
+    train_and_evaluate_RNN(batch_size=50, lstm_size=50)

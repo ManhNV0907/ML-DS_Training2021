@@ -30,6 +30,7 @@ class DataReader:
         self._batch_id += 1
 
         if end + self._batch_size > len(self._data):
+            start = len(self._data) - self._batch_size
             end = len(self._data)
             self._num_epoch += 1
             self._batch_id = 0
