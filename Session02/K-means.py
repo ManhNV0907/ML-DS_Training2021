@@ -77,7 +77,7 @@ class Kmeans():
             self._clusters[i].set_centroid(centroid[i])
 
     def compute_similarity(self, member, centroid):
-        return 1.0 / (np.linalg.norm(member._r_d - centroid._r_d) + 1)    
+        return 1.0 / (np.linalg.norm(member._r_d - centroid) + 1)    
     
     def select_cluster_for(self, member):
         best_fit_cluster = None
@@ -177,10 +177,3 @@ if __name__ == "__main__":
     kmeans.run(criterion = 'max_iters', threshold = 20)
     print("Purity score: ", kmeans.compute_purity())
     print("NMI score: ", kmeans.compute_NMI())
-
-
-
-    
-
-
-    
